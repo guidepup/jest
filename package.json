@@ -1,6 +1,6 @@
 {
   "name": "@guidepup/jest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Screen Reader Jest Matchers",
   "main": "lib/index.js",
   "author": "Craig Morten <craig.morten@hotmail.co.uk>",
