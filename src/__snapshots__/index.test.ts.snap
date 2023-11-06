@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matchers toMatchScreenReaderSnapshot on a hidden node: toMatchScreenReaderSnapshot 1`] = `[]`;
+
+exports[`matchers toMatchScreenReaderSnapshot on a null node: toMatchScreenReaderSnapshot 1`] = `[]`;
+
+exports[`matchers toMatchScreenReaderSnapshot on a text node: toMatchScreenReaderSnapshot 1`] = `
+[
+  "Nav Text",
+]
+`;
+
+exports[`matchers toMatchScreenReaderSnapshot on an element: toMatchScreenReaderSnapshot 1`] = `
+[
+  "region",
+  "heading, Second Section Heading, level 1",
+  "Second Section Text",
+  "end of region",
+]
+`;
+
+exports[`matchers toMatchScreenReaderSnapshot on the whole body: toMatchScreenReaderSnapshot 1`] = `
+[
+  "document",
+  "navigation",
+  "Nav Text",
+  "end of navigation",
+  "region",
+  "heading, First Section Heading, level 1",
+  "First Section Text",
+  "article",
+  "banner",
+  "heading, Article Header Heading, level 1",
+  "Article Header Text",
+  "end of banner",
+  "Article Text",
+  "end of article",
+  "end of region",
+  "region",
+  "heading, Second Section Heading, level 1",
+  "Second Section Text",
+  "end of region",
+  "contentinfo",
+  "Footer",
+  "end of contentinfo",
+  "end of document",
+]
+`;
