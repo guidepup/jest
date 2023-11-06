@@ -6,7 +6,7 @@
   <a href="https://github.com/guidepup/jest/blob/main/LICENSE"><img alt="Screen Reader Jest Matchers uses the MIT license" src="https://img.shields.io/github/license/guidepup/jest" /></a>
 </p>
 <p align="center">
-  [Jest](https://jestjs.io) matchers for reliable unit testing of your screen reader a11y workflows through JavaScript.
+  <a href="https://jestjs.io">Jest</a> matchers for reliable unit testing of your screen reader a11y workflows through JavaScript.
 </p>
 
 ## Intro
