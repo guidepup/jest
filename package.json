@@ -30,7 +30,13 @@
     "test:coverage": "yarn test --coverage",
     "prepublish": "yarn build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@guidepup/virtual-screen-reader": "^0.14.0",
+    "jest-snapshot": "^29.7.0"
+  },
+  "peerDependencies": {
+    "jest": "^29.7.0"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.7",
     "@types/node": "^20.8.10",
