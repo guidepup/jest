@@ -22,11 +22,12 @@ async function getScreenReaderOutput(container) {
 
   try {
     await virtual.start({ container });
+
     await virtual.next();
 
     const singleElement = virtual.activeNode === container;
 
-    while (virtual.activeNode !== container) {
+    while (virtual.activeNode !== container && virtual.activeNode !== null) {
       await virtual.next();
     }
 
