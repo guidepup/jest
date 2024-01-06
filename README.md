@@ -12,7 +12,7 @@ Through two custom Jest snapshot matchers you can get fast feedback on what you 
 
 > Note: This package should not replace your manual screen reader testing, there is no substitute for testing with real screen readers and with real users.
 
-For testing more complex scenarios, check out the [@guidepup/virtual-screen-reader](https://github.com/guidepup/virtual-screen-reader/) package.
+For testing more complex scenarios, check out the [`@guidepup/virtual-screen-reader`](https://github.com/guidepup/virtual-screen-reader/) package.
 
 If you are looking to automate real screen readers, check out the [`@guidepup/guidepup`](https://github.com/guidepup/guidepup) package.
 
