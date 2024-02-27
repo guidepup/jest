@@ -5,9 +5,10 @@ import { virtual } from "@guidepup/virtual-screen-reader";
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace jest {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     interface Matchers<R> {
-      toMatchScreenReaderSnapshot(): R;
-      toMatchScreenReaderInlineSnapshot(inlineSnapshot?: string): R;
+      toMatchScreenReaderSnapshot(): Promise<void>;
+      toMatchScreenReaderInlineSnapshot(inlineSnapshot?: string): Promise<void>;
     }
   }
 }
