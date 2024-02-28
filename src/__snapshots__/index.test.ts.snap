@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`matchers snapshot matchers handles parallel assertions: toMatchScreenReaderSnapshot 1`] = `
+[
+  "region",
+  "heading, Second Section Heading, level 1",
+  "Second Section Text",
+  "end of region",
+]
+`;
+
 exports[`matchers toMatchScreenReaderSnapshot on a hidden node: toMatchScreenReaderSnapshot 1`] = `[]`;
 
 exports[`matchers toMatchScreenReaderSnapshot on a null node: toMatchScreenReaderSnapshot 1`] = `[]`;

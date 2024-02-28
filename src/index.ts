@@ -1,5 +1,5 @@
 import { toMatchInlineSnapshot, toMatchSnapshot } from "jest-snapshot";
-import { virtual } from "@guidepup/virtual-screen-reader";
+import { Virtual } from "@guidepup/virtual-screen-reader";
 
 // REF: https://jestjs.io/docs/en/expect.html#expectextendmatchers
 declare global {
@@ -19,6 +19,8 @@ if (expect?.extend !== undefined) {
 }
 
 async function getScreenReaderOutput(container) {
+  const virtual = new Virtual();
+
   let spokenPhraseLog: string[] = [];
 
   try {
