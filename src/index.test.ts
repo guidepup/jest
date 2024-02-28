@@ -121,4 +121,21 @@ describe("matchers", () => {
   test("toMatchScreenReaderInlineSnapshot on a null node", async () => {
     await expect(null).toMatchScreenReaderInlineSnapshot(`[]`);
   });
+
+  test("snapshot matchers handles parallel assertions", async () => {
+    await Promise.all([
+      expect(
+        document.getElementsByTagName("section")[1]
+      ).toMatchScreenReaderSnapshot(),
+      expect(document.getElementsByTagName("section")[1])
+        .toMatchScreenReaderInlineSnapshot(`
+[
+  "region",
+  "heading, Second Section Heading, level 1",
+  "Second Section Text",
+  "end of region",
+]
+`),
+    ]);
+  });
 });
