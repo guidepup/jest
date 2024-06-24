@@ -34,6 +34,8 @@ npm install -D @guidepup/jest @guidepup/virtual-screen-reader
 yarn add -D @guidepup/jest @guidepup/virtual-screen-reader
 ```
 
+If you are using TypeScript, make sure to setup Jest correctly by following the [Using TypeScript](https://jestjs.io/docs/getting-started#using-typescript) guide.
+
 Add a [Jest setup file](https://jestjs.io/docs/configuration#setupfilesafterenv-array) (e.g. `setup-jest.js`) and add the following code to register the screen reader snapshot matchers:
 
 ```ts

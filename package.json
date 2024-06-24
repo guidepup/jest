@@ -1,6 +1,6 @@
 {
   "name": "@guidepup/jest",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Virtual Screen Reader Jest Matchers",
   "author": "Craig Morten <craig.morten@hotmail.co.uk>",
   "license": "MIT",
