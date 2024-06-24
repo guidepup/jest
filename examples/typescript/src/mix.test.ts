@@ -39,6 +39,44 @@ describe("matchers", () => {
     test("toMatchScreenReaderSnapshot on the whole body", async () => {
       await expect(document.body).toMatchScreenReaderSnapshot();
     });
+
+    test("toMatchScreenReaderInlineSnapshot on the whole body", async () => {
+      await expect(document.body).toMatchScreenReaderInlineSnapshot(`
+[
+  "document",
+  "navigation",
+  "Nav Text",
+  "end of navigation",
+  "region",
+  "heading, First Section Heading, level 1",
+  "paragraph",
+  "First Section Text",
+  "end of paragraph",
+  "article",
+  "banner",
+  "heading, Article Header Heading, level 1",
+  "paragraph",
+  "Article Header Text",
+  "end of paragraph",
+  "end of banner",
+  "paragraph",
+  "Article Text",
+  "end of paragraph",
+  "end of article",
+  "end of region",
+  "region",
+  "heading, Second Section Heading, level 1",
+  "paragraph",
+  "Second Section Text",
+  "end of paragraph",
+  "end of region",
+  "contentinfo",
+  "Footer",
+  "end of contentinfo",
+  "end of document",
+]
+`);
+    });
   });
 
   describe("virtual screen reader tests", () => {
