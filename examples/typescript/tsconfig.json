@@ -7,8 +7,7 @@
     "esModuleInterop": true,
     "declaration": true,
     "rootDir": "./",
-    "outDir": "./lib"
   },
   "include": ["src/**/*.ts", "jest.setup.ts"],
-  "exclude": ["examples", "lib", "node_modules"]
+  "exclude": ["node_modules"]
 }

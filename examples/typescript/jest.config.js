@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
   preset: "ts-jest",
-  resolver: "ts-jest-resolver",
   testEnvironment: "jsdom",
   roots: ["src"],
   collectCoverageFrom: ["**/*.ts"],
@@ -15,5 +14,4 @@ module.exports = {
     },
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
-  testPathIgnorePatterns: ["<rootDir>/examples"],
 };
