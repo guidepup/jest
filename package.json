@@ -1,8 +1,7 @@
 {
   "name": "@guidepup/jest",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "description": "Virtual Screen Reader Jest Matchers",
-  "main": "lib/index.js",
   "author": "Craig Morten <craig.morten@hotmail.co.uk>",
   "license": "MIT",
   "repository": {
@@ -19,11 +18,22 @@
     "a11y",
     "jest"
   ],
+  "types": "./lib/esm/index.d.mts",
+  "module": "./lib/esm/index.legacy-esm.js",
+  "main": "./lib/cjs/index.min.js",
+  "exports": {
+    ".": {
+      "types": "./lib/esm/index.d.mts",
+      "import": "./lib/esm/index.mjs",
+      "require": "./lib/cjs/index.min.js",
+      "default": "./lib/cjs/index.min.js"
+    }
+  },
   "scripts": {
     "build": "yarn clean && yarn compile",
     "ci": "yarn clean && yarn lint && yarn test:coverage && yarn build",
     "clean": "rimraf lib",
-    "compile": "tsc",
+    "compile": "tsup",
     "lint": "eslint . --ext .ts --cache",
     "lint:fix": "yarn lint --fix",
     "test": "jest",
@@ -34,22 +44,24 @@
     "jest-snapshot": "^29.7.0"
   },
   "peerDependencies": {
-    "@guidepup/virtual-screen-reader": ">=0.14.0",
+    "@guidepup/virtual-screen-reader": ">=0.25.0",
     "jest": ">=29"
   },
   "devDependencies": {
-    "@guidepup/virtual-screen-reader": "^0.19.0",
+    "@guidepup/virtual-screen-reader": "^0.25.0",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.11.20",
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "@typescript-eslint/parser": "^7.1.0",
+    "@types/node": "^20.14.8",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "rimraf": "^5.0.5",
-    "ts-jest": "^29.1.2",
+    "rimraf": "^5.0.7",
+    "ts-jest": "^29.1.5",
+    "ts-jest-resolver": "^2.0.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
   }
 }

@@ -1,5 +1,3 @@
-import "./";
-
 function setupBasicPage() {
   document.body.innerHTML = `
   <nav>Nav Text</nav>
