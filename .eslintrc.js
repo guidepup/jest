@@ -8,4 +8,5 @@ module.exports = {
     "prettier",
   ],
   rules: { "sort-imports": ["error", { ignoreCase: true }] },
+  ignorePatterns: ["lib"]
 };

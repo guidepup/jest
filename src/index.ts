@@ -1,4 +1,5 @@
 import { toMatchInlineSnapshot, toMatchSnapshot } from "jest-snapshot";
+import type { Context } from "jest-snapshot";
 import { Virtual } from "@guidepup/virtual-screen-reader";
 
 // REF: https://jestjs.io/docs/en/expect.html#expectextendmatchers
@@ -44,8 +45,14 @@ declare module "expect" {
 }
 
 if (expect?.extend !== undefined) {
-  expect.extend({ toMatchScreenReaderInlineSnapshot });
-  expect.extend({ toMatchScreenReaderSnapshot });
+  expect.extend({
+    toMatchScreenReaderInlineSnapshot:
+      toMatchScreenReaderInlineSnapshot as jest.CustomMatcher,
+  });
+  expect.extend({
+    toMatchScreenReaderSnapshot:
+      toMatchScreenReaderSnapshot as jest.CustomMatcher,
+  });
 }
 
 async function getScreenReaderOutput(container: Node): Promise<string[]> {
@@ -86,12 +93,14 @@ async function getScreenReaderOutput(container: Node): Promise<string[]> {
  * @param {string} inlineSnapshot The inline snapshot to compare against.
  */
 export async function toMatchScreenReaderInlineSnapshot(
+  this: Context,
   container: Node,
   ...inlineSnapshot: [
     propertiesOrSnapshot?: object | string,
     inlineSnapshot?: string
   ]
 ): Promise<jest.CustomMatcherResult> {
+  // @ts-expect-error The error (and its stacktrace) must be created before any `await`. REF: https://jestjs.io/docs/expect#async
   this.error = new Error();
 
   const snapshot = await getScreenReaderOutput(container);
@@ -106,8 +115,10 @@ export async function toMatchScreenReaderInlineSnapshot(
  * @param {Node} container The bounding HTML element to take the Virtual Screen Reader snapshot in. To use the entire page pass `document.body`.
  */
 export async function toMatchScreenReaderSnapshot(
+  this: Context,
   container: Node
 ): Promise<jest.CustomMatcherResult> {
+  // @ts-expect-error The error (and its stacktrace) must be created before any `await`. REF: https://jestjs.io/docs/expect#async
   this.error = new Error();
 
   const snapshot = await getScreenReaderOutput(container);

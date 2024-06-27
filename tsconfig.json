@@ -1,14 +1,22 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
-    "target": "esnext",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "jsx": "react",
+    "noErrorTruncation": true,
     "declaration": true,
-    "rootDir": "./",
-    "outDir": "./lib"
+    "emitDeclarationOnly": true,
+    "outDir": "lib",
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "rootDir": "./"
   },
-  "include": ["src/**/*.ts", "jest.setup.ts"],
-  "exclude": ["examples", "lib", "node_modules"]
+  "include": ["src/**/*", "jest.setup.ts"],
+  "exclude": ["node_modules", "lib"]
 }

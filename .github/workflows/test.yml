@@ -16,11 +16,16 @@ jobs:
           node-version: 18
       - run: yarn install --frozen-lockfile
       - run: yarn ci
-      # TypeScript Example
+      # TypeScript NodeNext Example
       - run: yarn install --frozen-lockfile
-        working-directory: ./examples/typescript
+        working-directory: ./examples/typescript-nodenext
       - run: yarn test
-        working-directory: ./examples/typescript
+        working-directory: ./examples/typescript-nodenext
+      # TypeScript Legacy Example
+      - run: yarn install --frozen-lockfile
+        working-directory: ./examples/typescript-legacy
+      - run: yarn test
+        working-directory: ./examples/typescript-legacy
 
   test-node-20:
     runs-on: ubuntu-latest
@@ -31,8 +36,13 @@ jobs:
           node-version: 20
       - run: yarn install --frozen-lockfile
       - run: yarn ci
-      # TypeScript Example
+      # TypeScript NodeNext Example
       - run: yarn install --frozen-lockfile
-        working-directory: ./examples/typescript
+        working-directory: ./examples/typescript-nodenext
       - run: yarn test
-        working-directory: ./examples/typescript
+        working-directory: ./examples/typescript-nodenext
+      # TypeScript Legacy Example
+      - run: yarn install --frozen-lockfile
+        working-directory: ./examples/typescript-legacy
+      - run: yarn test
+        working-directory: ./examples/typescript-legacy
