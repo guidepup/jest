@@ -2,6 +2,7 @@ import { defineConfig, Options } from "tsup";
 
 export default defineConfig((options) => {
   const commonOptions: Partial<Options> = {
+    clean: true,
     entry: {
       index: "src/index.ts",
     },
@@ -16,7 +17,6 @@ export default defineConfig((options) => {
       format: ["esm"],
       outExtension: () => ({ js: ".mjs" }),
       dts: true,
-      clean: true,
       outDir: "./lib/esm/",
     },
     // Support Webpack 4 by pointing `"module"` to a file with a `.js` extension
@@ -36,7 +36,6 @@ export default defineConfig((options) => {
       format: ["cjs"],
       outExtension: () => ({ js: ".cjs" }),
       dts: true,
-      clean: true,
       outDir: "./lib/cjs/",
     },
     // CJS old extension
@@ -44,7 +43,6 @@ export default defineConfig((options) => {
       ...commonOptions,
       format: ["cjs"],
       outExtension: () => ({ js: ".js" }),
-      clean: true,
       outDir: "./lib/cjs/",
     },
   ] as Options[];
