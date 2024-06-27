@@ -1,6 +1,6 @@
 {
   "name": "@guidepup/jest",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Virtual Screen Reader Jest Matchers",
   "author": "Craig Morten <craig.morten@hotmail.co.uk>",
   "license": "MIT",
@@ -18,29 +18,38 @@
     "a11y",
     "jest"
   ],
-  "main": "./lib/cjs/index.cjs",
+  "main": "./lib/cjs/index.js",
   "types": "./lib/cjs/index.d.ts",
   "module": "./lib/esm/index.legacy-esm.js",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./lib/esm/index.d.mts",
-      "import": "./lib/esm/index.mjs",
-      "require": "./lib/cjs/index.cjs",
-      "default": "./lib/cjs/index.cjs"
+      "import": {
+        "types": "./lib/esm/index.d.mts",
+        "default": "./lib/esm/index.mjs"
+      },
+      "require": {
+        "types": "./lib/cjs/index.d.ts",
+        "default": "./lib/cjs/index.cjs"
+      },
+      "default": {
+        "types": "./lib/cjs/index.d.ts",
+        "default": "./lib/cjs/index.cjs"
+      }
     }
   },
   "sideEffects": true,
   "scripts": {
     "build": "yarn clean && yarn compile",
-    "ci": "yarn clean && yarn lint && yarn test:coverage && yarn build",
+    "ci": "yarn clean && yarn lint && yarn test:coverage && yarn build && yarn types:test",
     "clean": "rimraf lib",
     "compile": "tsup",
     "lint": "eslint . --ext .ts --cache",
     "lint:fix": "yarn lint --fix",
+    "prepublish": "yarn build",
     "test": "jest",
     "test:coverage": "yarn test --coverage",
-    "prepublish": "yarn build"
+    "types:test": "attw --pack"
   },
   "dependencies": {
     "jest-snapshot": "^29.7.0"
@@ -50,6 +59,7 @@
     "jest": ">=29"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.15.3",
     "@guidepup/virtual-screen-reader": "^0.26.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.8",
