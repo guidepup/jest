@@ -1,21 +1,21 @@
 {
-  "name": "@guidepup/jest-typescript-example",
+  "name": "@guidepup/jest-typescript-legacy-example",
   "version": "1.0.0",
-  "description": "Virtual Screen Reader Jest Matchers TypeScript Example",
   "author": "Craig Morten <craig.morten@hotmail.co.uk>",
   "license": "MIT",
+  "private": true,
   "scripts": {
-    "test": "jest",
-    "test:coverage": "yarn test --coverage"
+    "preinstall": "yarn --cwd=../.. build",
+    "test": "jest"
   },
   "devDependencies": {
-    "@guidepup/jest": "file:../../",
-    "@guidepup/virtual-screen-reader": "^0.25.0",
+    "@guidepup/virtual-screen-reader": "^0.26.0",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.8",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "ts-jest": "^29.1.5",
+    "ts-jest-resolver": "^2.0.1",
     "typescript": "^5.5.2"
   }
 }

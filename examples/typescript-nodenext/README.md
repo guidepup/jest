@@ -1,6 +1,6 @@
-# TypeScript Example
+# TypeScript NodeNext Example
 
-A basic TypeScript example using the Virtual Screen Reader Jest Matchers.
+A basic example where Virtual Screen Reader Jest Matchers is used for a Node.js application or library.
 
 Run this example with:
 
@@ -9,7 +9,7 @@ Run this example with:
 yarn install --frozen-lockfile
 
 # Navigate to example, install, and test
-cd examples/typescript
+cd examples/typescript-nodenext
 yarn install --frozen-lockfile
 yarn test
 ```

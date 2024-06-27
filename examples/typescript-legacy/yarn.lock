@@ -328,15 +328,10 @@
     semver "^7.3.8"
     shelljs "^0.8.5"
 
-"@guidepup/jest@file:../..":
-  version "0.4.0"
-  dependencies:
-    jest-snapshot "^29.7.0"
-
-"@guidepup/virtual-screen-reader@^0.25.0":
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/@guidepup/virtual-screen-reader/-/virtual-screen-reader-0.25.0.tgz#44de40a1133f1d74179cd5284ceefafac35dbed7"
-  integrity sha512-EhBUhzak+r8hhlBJQEwaoPfH3PsTdYGGXZ7wr1IM+/2PxKurE4Gokmx3jJc2PckWdAdEtGDxqaIlSLrVi4fNzA==
+"@guidepup/virtual-screen-reader@^0.26.0":
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/@guidepup/virtual-screen-reader/-/virtual-screen-reader-0.26.0.tgz#377f1e39fe11b54e75302e9a6c0f80586d9f5ff0"
+  integrity sha512-Q9RgFrIWPALW2s7DMVD6XsEGDZDw9kLSTIhvA9TXqjfK/RsTnJ1L3u/7+zBHPhy9eRCWTMP9SnDV2VZ8dvNzmA==
   dependencies:
     "@guidepup/guidepup" "^0.22.3"
     "@testing-library/dom" "^10.2.0"
@@ -1806,7 +1801,7 @@ jest-resolve-dependencies@^29.7.0:
     jest-regex-util "^29.6.3"
     jest-snapshot "^29.7.0"
 
-jest-resolve@^29.7.0:
+jest-resolve@^29.5.0, jest-resolve@^29.7.0:
   version "29.7.0"
   resolved "https://registry.yarnpkg.com/jest-resolve/-/jest-resolve-29.7.0.tgz#64d6a8992dd26f635ab0c01e5eef4399c6bcbc30"
   integrity sha512-IOVhZSrg+UvVAshDSDtHyFCCBUl/Q3AAJv8iZ6ZjnZ74xzvwuzLXid9IIIPgTnY62SJjfuupMKZsZQRsCvxEgA==
@@ -2619,6 +2614,13 @@ tr46@^3.0.0:
   integrity sha512-l7FvfAHlcmulp8kr+flpQZmVwtu7nfRV7NZujtN0OqES8EL4O4e0qqzL0DC5gAvx/ZC/9lk6rhcUwYvkBnBnYA==
   dependencies:
     punycode "^2.1.1"
+
+ts-jest-resolver@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ts-jest-resolver/-/ts-jest-resolver-2.0.1.tgz#4a1563cb10967e17eaae04157b0ba34e24d1c247"
+  integrity sha512-FolE73BqVZCs8/RbLKxC67iaAtKpBWx7PeLKFW2zJQlOf9j851I7JRxSDenri2NFvVH3QP7v3S8q1AmL24Zb9Q==
+  dependencies:
+    jest-resolve "^29.5.0"
 
 ts-jest@^29.1.5:
   version "29.1.5"

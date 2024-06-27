@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matchers snapshot matchers handles parallel assertions: toMatchScreenReaderSnapshot 1`] = `
+[
+  "region",
+  "heading, Second Section Heading, level 1",
+  "paragraph",
+  "Second Section Text",
+  "end of paragraph",
+  "end of region",
+]
+`;
+
+exports[`matchers toMatchScreenReaderSnapshot on a hidden node: toMatchScreenReaderSnapshot 1`] = `[]`;
+
+exports[`matchers toMatchScreenReaderSnapshot on a null node: toMatchScreenReaderSnapshot 1`] = `[]`;
+
+exports[`matchers toMatchScreenReaderSnapshot on a text node: toMatchScreenReaderSnapshot 1`] = `
+[
+  "Nav Text",
+]
+`;
+
+exports[`matchers toMatchScreenReaderSnapshot on an element: toMatchScreenReaderSnapshot 1`] = `
+[
+  "region",
+  "heading, Second Section Heading, level 1",
+  "paragraph",
+  "Second Section Text",
+  "end of paragraph",
+  "end of region",
+]
+`;
+
+exports[`matchers toMatchScreenReaderSnapshot on the whole body: toMatchScreenReaderSnapshot 1`] = `
+[
+  "document",
+  "navigation",
+  "Nav Text",
+  "end of navigation",
+  "region",
+  "heading, First Section Heading, level 1",
+  "paragraph",
+  "First Section Text",
+  "end of paragraph",
+  "article",
+  "banner",
+  "heading, Article Header Heading, level 1",
+  "paragraph",
+  "Article Header Text",
+  "end of paragraph",
+  "end of banner",
+  "paragraph",
+  "Article Text",
+  "end of paragraph",
+  "end of article",
+  "end of region",
+  "region",
+  "heading, Second Section Heading, level 1",
+  "paragraph",
+  "Second Section Text",
+  "end of paragraph",
+  "end of region",
+  "contentinfo",
+  "Footer",
+  "end of contentinfo",
+  "end of document",
+]
+`;
